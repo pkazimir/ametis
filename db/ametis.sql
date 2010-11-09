@@ -1,6 +1,6 @@
 /*
 SQLyog Community Edition- MySQL GUI v8.11 
-MySQL - 4.1.22-community-nt : Database - ametis
+MySQL - 5.1.36-community-log : Database - ametis
 *********************************************************************
 */
 
@@ -10,17 +10,21 @@ MySQL - 4.1.22-community-nt : Database - ametis
 
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`ametis` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `ametis`;
+
 /*Table structure for table `breakfast` */
 
 DROP TABLE IF EXISTS `breakfast`;
 
 CREATE TABLE `breakfast` (
-  `id_room` int(10) unsigned NOT NULL default '0',
-  `guestname` varchar(45) NOT NULL default '',
-  `wakeup` varchar(5) NOT NULL default '',
-  `bftime` varchar(5) NOT NULL default '',
+  `id_room` int(10) unsigned NOT NULL DEFAULT '0',
+  `guestname` varchar(45) NOT NULL DEFAULT '',
+  `wakeup` varchar(5) NOT NULL DEFAULT '',
+  `bftime` varchar(5) NOT NULL DEFAULT '',
   `info` longtext NOT NULL,
-  PRIMARY KEY  (`id_room`)
+  PRIMARY KEY (`id_room`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `breakfast` */
@@ -32,12 +36,12 @@ insert  into `breakfast`(id_room,guestname,wakeup,bftime,info) values (6,'Mr. Su
 DROP TABLE IF EXISTS `files`;
 
 CREATE TABLE `files` (
-  `id_file` int(10) unsigned NOT NULL auto_increment,
-  `name` varchar(45) NOT NULL default '',
-  `info` varchar(160) NOT NULL default '',
-  `date` date NOT NULL default '0000-00-00',
-  PRIMARY KEY  (`id_file`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id_file` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL DEFAULT '',
+  `info` varchar(160) NOT NULL DEFAULT '',
+  `date` date NOT NULL DEFAULT '0000-00-00',
+  PRIMARY KEY (`id_file`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 /*Data for the table `files` */
 
@@ -48,12 +52,8 @@ insert  into `files`(id_file,name,info,date) values (1,'amcham_members.xls','Ame
 DROP TABLE IF EXISTS `files_assoc_cat_file`;
 
 CREATE TABLE `files_assoc_cat_file` (
-  `id_cat` int(10) unsigned NOT NULL default '0',
-  `id_file` int(10) unsigned NOT NULL default '0',
-  KEY `FK_files_cat_file_1` (`id_cat`),
-  KEY `FK_files_cat_file_2` (`id_file`),
-  CONSTRAINT `FK_files_cat_file_1` FOREIGN KEY (`id_cat`) REFERENCES `files_categories` (`id_cat`),
-  CONSTRAINT `FK_files_cat_file_2` FOREIGN KEY (`id_file`) REFERENCES `files` (`id_file`)
+  `id_cat` int(10) unsigned NOT NULL DEFAULT '0',
+  `id_file` int(10) unsigned NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `files_assoc_cat_file` */
@@ -65,10 +65,10 @@ insert  into `files_assoc_cat_file`(id_cat,id_file) values (1,1),(1,2),(1,3),(1,
 DROP TABLE IF EXISTS `files_categories`;
 
 CREATE TABLE `files_categories` (
-  `id_cat` int(10) unsigned NOT NULL auto_increment,
-  `name` varchar(45) NOT NULL default '',
-  PRIMARY KEY  (`id_cat`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id_cat` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id_cat`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Data for the table `files_categories` */
 
@@ -79,14 +79,14 @@ insert  into `files_categories`(id_cat,name) values (1,'Adee');
 DROP TABLE IF EXISTS `food`;
 
 CREATE TABLE `food` (
-  `id_food` int(10) unsigned NOT NULL auto_increment,
-  `food_name` varchar(55) NOT NULL default '',
-  `ing` varchar(100) NOT NULL default '',
-  `price` double NOT NULL default '0',
-  `id_group` int(11) NOT NULL default '0',
-  `ord_qty` int(10) unsigned NOT NULL default '0',
-  PRIMARY KEY  (`id_food`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id_food` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `food_name` varchar(55) NOT NULL DEFAULT '',
+  `ing` varchar(100) NOT NULL DEFAULT '',
+  `price` double NOT NULL DEFAULT '0',
+  `id_group` int(11) NOT NULL DEFAULT '0',
+  `ord_qty` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_food`)
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=latin1;
 
 /*Data for the table `food` */
 
@@ -97,8 +97,8 @@ insert  into `food`(id_food,food_name,ing,price,id_group,ord_qty) values (1,'Pro
 DROP TABLE IF EXISTS `food_groups`;
 
 CREATE TABLE `food_groups` (
-  `name` varchar(20) NOT NULL default '',
-  `id` int(10) unsigned NOT NULL default '0'
+  `name` varchar(20) NOT NULL DEFAULT '',
+  `id` int(10) unsigned NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `food_groups` */
@@ -110,14 +110,14 @@ insert  into `food_groups`(name,id) values ('Cold Appetizers',1),('Pasta',2),('M
 DROP TABLE IF EXISTS `login`;
 
 CREATE TABLE `login` (
-  `id` int(10) unsigned NOT NULL auto_increment,
-  `login` varchar(10) NOT NULL default '',
-  `pass` varchar(20) NOT NULL default '',
-  `session_ID` varchar(45) NOT NULL default '',
-  `name` varchar(20) default NULL,
-  `surname` varchar(20) default NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `login` varchar(10) NOT NULL DEFAULT '',
+  `pass` varchar(20) NOT NULL DEFAULT '',
+  `session_ID` varchar(45) NOT NULL DEFAULT '',
+  `name` varchar(20) DEFAULT NULL,
+  `surname` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*Data for the table `login` */
 
@@ -128,11 +128,11 @@ insert  into `login`(id,login,pass,session_ID,name,surname) values (1,'p','p',''
 DROP TABLE IF EXISTS `menu`;
 
 CREATE TABLE `menu` (
-  `id` int(10) unsigned NOT NULL auto_increment,
-  `module_name` varchar(45) NOT NULL default '',
-  `module` varchar(45) NOT NULL default '',
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `module_name` varchar(45) NOT NULL DEFAULT '',
+  `module` varchar(45) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 /*Data for the table `menu` */
 
@@ -143,12 +143,12 @@ insert  into `menu`(id,module_name,module) values (1,'Delivery','showDelivery'),
 DROP TABLE IF EXISTS `minibar`;
 
 CREATE TABLE `minibar` (
-  `id` int(10) unsigned NOT NULL auto_increment,
-  `name` varchar(45) NOT NULL default '',
-  `price_mm` double NOT NULL default '0',
-  `pocet` int(10) unsigned NOT NULL default '0',
-  PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL DEFAULT '',
+  `price_mm` double NOT NULL DEFAULT '0',
+  `pocet` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 /*Data for the table `minibar` */
 
@@ -159,9 +159,9 @@ insert  into `minibar`(id,name,price_mm,pocet) values (1,'Evian',2.99,2),(2,'Per
 DROP TABLE IF EXISTS `rooms`;
 
 CREATE TABLE `rooms` (
-  `id` int(10) unsigned NOT NULL default '0',
-  `room` varchar(10) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
+  `id` int(10) unsigned NOT NULL DEFAULT '0',
+  `room` varchar(10) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `rooms` */
