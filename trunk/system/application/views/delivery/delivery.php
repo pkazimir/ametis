@@ -8,18 +8,32 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
+    
+    var laMyFood=new Array();
+    
     $("tr#foodRecord").mouseover(function(){
         $(this).removeClass("out");
         $(this).addClass("over");
- 
     });
 
     $("tr#foodRecord").mouseout(function(){
-        $(this).removeClass("over"); 
-  
-});
+        if(!$(this).hasClass("clicked")){
+            $(this).removeClass("over");
+        }
+    });
     
-    
+    $("tr#foodRecord").click(function(){
+        if(!$(this).hasClass("clicked"))
+        {
+            $(this).addClass("clicked");
+            $(this).find(".qty").css("visibility", "visible");
+        }
+        else
+        {
+            $(this).removeClass("clicked");
+            $(this).find(".qty").css("visibility", "hidden");
+        }
+    });
 });
 </script>
 
@@ -99,7 +113,7 @@ $(document).ready(function(){
             foreach($laFood[$idGroup] as $idFood => $laFoodItem):
             ?>
             <tr id="foodRecord" class="fontik" <?php if (($j++ % 2) == 0) echo 'bgcolor="#F4F1F0"' ?>>
-                <td id="<?php echo $idFood ?>" width="40"><input type="text" size="1" value="1" name="qty<?php echo $idFood ?>" style="visibility: hidden;"></td>
+                <td id="<?php echo $laFoodItem['id_food'] ?>" width="40"><input class="qty" type="text" size="1" value="1" name="qty<?php echo $idFood ?>" style="visibility: hidden;"></td>
                 <td width="272" class="order_form"><?php echo $laFoodItem['food_name'] ?></td>
                 <td><?php echo $laFoodItem['ing'] ?></td>
                 <td align="right" width="90"><?php echo $laFoodItem['price'] ?>,- &euro; &nbsp;&nbsp;&nbsp;</td>
