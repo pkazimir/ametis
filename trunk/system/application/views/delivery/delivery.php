@@ -1,8 +1,12 @@
 <style>
 .over {
+    background-color: #ffb882;
+    cursor: pointer;
+}
+
+.clicked {
     background-color: #ef781e;
     cursor: pointer;
-    border: red solid thin;
 }
 </style>
 
