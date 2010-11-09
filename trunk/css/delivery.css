@@ -1,0 +1,123 @@
+/*
+the beginning for the main interface in the mod_delivery
+*/
+
+.room_service_nadpis {
+	font-family: Trebuchet MS;
+	font-weight: bold;
+	font-size: 20px;
+	color: #EF701D
+}
+
+.room_service_guest_info {
+	font-family: Trebuchet MS;
+	font-weight: bold;
+	font-size: 15px;
+	border-style: solid;
+	background-color: #F4F1F0;
+	border-left-color: #D8D5CE;
+	border-left-width: 1px;
+	border-bottom-color: #D8D5CE;
+	border-bottom-width: 1px;
+	border-top-color: #D8D5CE;
+	border-top-width: 1px;
+	border-right-color: #D8D5CE;
+	border-right-width: 1px;
+}
+
+.fontik {
+	font-family: Trebuchet MS;
+	font-size: 10px;
+}
+
+.order_form {
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.input_style {
+	border-style: solid;
+	border-width: 1px;
+	border-left-color: #94989E;
+	border-bottom-color: #94989E;
+	border-top-color: #94989E;
+	border-right-color: #94989E;
+}
+
+.list_font_title {
+	font-family: Trebuchet MS;
+	font-weight: bold;
+	color: White;
+	font-size: 14px;
+}
+
+.list_font {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+/*	font-weight: bold; */
+	color: black;
+	font-size: 13px;
+}
+
+.list_border_left {
+	border-left-color: #D8D5CE;
+	border-style: solid;
+	border-left-width: 1px;
+	border-bottom-width: 0px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+}
+
+.list_border_right {
+	border-right-color: #D8D5CE;
+	border-style: solid;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-top-width: 0px;
+	border-right-width: 1px;
+}
+
+.list_border_bottom {
+	border-top-color: #D8D5CE;
+	border-style: solid;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-top-width: 1px;
+	border-right-width: 0px;
+}
+
+.list_border_left_right_bottom {
+	border-left-color: #D8D5CE;
+	border-right-color: #D8D5CE;
+	border-bottom-color: #D8D5CE;
+	border-style: solid;
+	border-left-width: 1px;
+	border-bottom-width: 1px;
+	border-top-width: 0px;
+	border-right-width: 1px;
+}
+
+.list_total {
+	font-family: Trebuchet MS;
+	font-weight: bold;
+	font-size: 19px;
+	color: black;
+}
+
+.button {
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	background: #273D5B;
+	font-weight: bold;
+	color: White;
+}
+
+.button_add {
+	font-weight: bold;
+	background: #297195;
+}
+
+.total {
+    font-family: Trebuchet MS;
+    font-size: 9px;
+}
