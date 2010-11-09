@@ -1,0 +1,133 @@
+/*
+Add file
+*/
+
+.menu_bg_border {
+	border-style: solid;
+	background-color: #F4F1F0;
+	border-left-color: #D8D5CE;
+	border-left-width: 1px;
+	border-bottom-color: #D8D5CE;
+	border-bottom-width: 1px;
+	border-top-color: #D8D5CE;
+	border-top-width: 0px;
+	border-right-color: #D8D5CE;
+	border-right-width: 1px;
+}
+
+.header_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: White;
+}
+
+.input_text {
+	border-style: solid;
+	border-width: 1px;
+	border-left-color: #94989E;
+	border-bottom-color: #94989E;
+	border-top-color: #94989E;
+	border-right-color: #94989E;
+}
+
+.button_orange {
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	background: #F0741E;
+	font-weight: bold;
+	color: White;
+}
+
+.print_header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: Black;
+}
+
+.print_b_l {
+	border-style: solid;
+	border-left-color: #D8D5CE;
+	border-left-width: 1px;
+}
+
+.print_b_l0 {
+	border-style: solid;
+	border-left-color: #D8D5CE;
+	border-left-width: 0px;
+}
+
+.print_b_l2 {
+	border-style: solid;
+	border-left-color: Black;
+	border-left-width: 2px;
+}
+
+.print_b_r {
+	border-style: solid;
+	border-right-color: #D8D5CE;
+	border-right-width: 1px;
+}
+
+.print_b_r0 {
+	border-style: solid;
+	border-right-color: #D8D5CE;
+	border-right-width: 0px;
+}
+
+.print_b_r2 {
+	border-style: solid;
+	border-right-color: Black;
+	border-right-width: 2px;
+}
+
+.print_b_t {
+	border-style: solid;
+	border-top-color: #D8D5CE;
+	border-top-width: 1px;
+}
+
+.print_b_t0 {
+	border-style: solid;
+	border-top-color: #D8D5CE;
+	border-top-width: 0px;
+}
+
+.print_b_t2 {
+	border-style: solid;
+	border-top-color: Black;
+	border-top-width: 2px;
+}
+
+.print_b_b {
+	border-style: solid;
+	border-bottom-color: #D8D5CE;
+	border-bottom-width: 1px;
+}
+
+.print_b_b0 {
+	border-style: solid;
+	border-bottom-color: #D8D5CE;
+	border-bottom-width: 0px;
+}
+
+.print_b_b2 {
+	border-style: solid;
+	border-bottom-color: Black;
+	border-bottom-width: 2px;
+}
+
+.print_list_header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: Black;
+}
+
+.print_main_font {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: Black;
+}

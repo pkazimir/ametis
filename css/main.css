@@ -1,0 +1,63 @@
+/*
+Main CSS file for the CORE - let's define it as "the style"
+*/
+
+.main_font {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: Black;
+}
+
+A {
+	text-decoration: none;
+}
+
+A:hover {
+	text-decoration: none;
+}
+
+A:visited {
+	text-decoration: none;
+}
+
+/* menu anchor */
+a.anchor_menu {
+    color: #253242;
+}
+
+a.anchor_menu:hover {
+    color: white;
+}
+
+/* print_button */
+a.print_button {
+    text-decoration: none;
+    color: #253242;
+}
+
+a.print_button:hover {
+    text-decoration: none;
+    color: #ff7000;
+}
+
+.menu_text {
+	font-family: Trebuchet MS;
+	font-size: 11px;
+	font-weight: bold;
+	color: #253242;
+    cursor: pointer;
+}
+
+.menu_text_active {
+	font-family: Trebuchet MS;
+	font-size: 11px;
+	font-weight: bold;
+	color: White;
+    cursor: pointer;
+}
+
+.menu_text_user {
+	font-family: Trebuchet MS;
+	font-size: 11px;
+	color: #253242;
+}
