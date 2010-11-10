@@ -3,7 +3,7 @@ class Login extends Controller {
     
     function index() {
         
-        $this->load->view('login');
+        $this->load->view('login/login');
     }
 }
 ?>
