@@ -45,3 +45,15 @@ position: relative; top: 70px;
 		font-weight: bold;
         cursor: pointer;
 		}
+
+        #twitter_bird  {
+        margin-top:93px;
+        position:absolute;
+        cursor:pointer;
+        }
+        
+        #twitter_msg {
+        margin-left:23px;
+        margin-top:51px;
+        position:absolute;
+        }

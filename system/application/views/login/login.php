@@ -9,7 +9,9 @@
 <body>
 <div id="LoginWrap">
 	<div id="LoginLogo">
-    	<img alt="" src="images/login/logo.png" title="Logo Tooltip Text" />
+    	<img alt="" src="images/login/logo.png" title="Ametis" />
+        <a href="http://www.twitter.com/project_ametis" target="_blank"><img id="twitter_bird" src="images/login/bird_smile.png" alt="" onmouseover="twitter_msg.style.display='inline'" onmouseout="twitter_msg.style.display='none'" border="0"/></a>
+        <img id="twitter_msg" src="images/login/twitter_message.png" alt="" style="display: none;" />
     </div><!--LoginLogo-->
     <div id="LoginBody">
     	<label>Username:</label><br/>
