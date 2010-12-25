@@ -8,13 +8,6 @@ class Files_model extends Model {
         $this->load->database();
     }
     
-    function getCategories() {
-        
-        $laCategories = $this->db->query('SELECT * FROM files_categories');
-        
-        return $laCategories->result_array();
-    }
-    
     function getFiles($keyword = null) {
         
         $sql = 'SELECT * FROM files';

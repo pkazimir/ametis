@@ -133,7 +133,6 @@ class Ametis extends Controller {
         $this->load->model('files_model');
         
         $data = array();
-        $data['laCategories'] = $this->files_model->getCategories();
         $data['laFiles'] = $this->files_model->getFiles($this->input->post('keyword'));
         
         $data['lsKeyword'] = $this->input->post('keyword');
