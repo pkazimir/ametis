@@ -4,10 +4,11 @@
 <title>Ametis</title>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
 <base href="<?php echo base_url() ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'css/main.css' ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'css/delivery.css' ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'css/breakfast.css' ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'css/ui-lightness/jquery-ui-1.8.6.custom.css' ?>">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/delivery.css">
+<link rel="stylesheet" type="text/css" href="css/breakfast.css">
+<link rel="stylesheet" type="text/css" href="css/files.css">
+<link rel="stylesheet" type="text/css" href="css/ui-lightness/jquery-ui-1.8.6.custom.css">
 <script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.6.custom.min.js"></script>
 <script type="text/javascript" src="js/jquery.PrintArea.js"></script>

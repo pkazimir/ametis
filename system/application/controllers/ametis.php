@@ -57,7 +57,8 @@ class Ametis extends Controller {
     function showMinibar() {
         
         $this->showHeader();
-        $this->load->view('minibar/main');
+        
+        $this->load->view('minibar/minibar');
     }
     
     /**
@@ -123,10 +124,80 @@ class Ametis extends Controller {
     * 
     */
     
-    function showFiles() {
+    function showFiles($postData = array()) {
         
         $this->showHeader();
-        $this->load->view('files/main');
+        
+        $this->load->helper(array('form', 'url'));
+        
+        $this->load->model('files_model');
+        
+        $data = array();
+        $data['laCategories'] = $this->files_model->getCategories();
+        $data['laFiles'] = $this->files_model->getFiles($this->input->post('keyword'));
+        
+        $data['lsKeyword'] = $this->input->post('keyword');
+        
+        if ($postData && $postData['upload_status'] == 'success') {
+            $data['liUploadStatus'] = 2;
+            $data['laUploadData'] = $postData['upload_data'];
+        } elseif ($postData && $postData['upload_status'] == 'failed') {
+            $data['liUploadStatus'] = 1;
+        } elseif ($postData && $postData['upload_status'] == 'exists') {
+            $data['liUploadStatus'] = 3;
+        } else {
+            $data['liUploadStatus'] = 0;
+        }
+        
+        $this->load->view('files/files', $data);
+    }
+    
+    function uploadFiles() {
+        
+        $lsInfo = $this->input->post('info', TRUE);
+        
+        $config['upload_path'] = 'uploads/';
+        $config['allowed_types'] = 'all';
+
+        $this->load->library('myupload', $config);
+        $this->load->model('files_model');
+        
+        $postData = array();
+        
+        if (! $this->myupload->testIfExists()) {
+            if ( ! $result = $this->myupload->do_upload())
+            {
+                $postData['upload_status'] = 'failed';
+                $this->showFiles($postData);
+            }    
+            else
+            {
+                $fileData = $this->myupload->data();
+                $this->files_model->addFile($fileData['file_name'], $lsInfo);
+                $postData['upload_status'] = 'success';
+                $postData['upload_data'] = $fileData;
+            }
+        } else {
+            $postData['upload_status'] = 'exists';    
+        }
+        $this->showFiles($postData);
+    }
+    
+    function deleteFile($id, $filename) {
+        
+        $this->load->model('files_model');
+        
+        $this->files_model->deleteFile($id);
+        @$del = unlink("uploads/".$filename);
+        
+        $this->showFiles();
+    }
+    
+    function searchFiles() {
+        
+        $lsSearchStr = $this->input->post('keyword');
+        
+        $this->showFiles();
     }
 }
 ?>
