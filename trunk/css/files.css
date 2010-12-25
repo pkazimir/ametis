@@ -1,0 +1,250 @@
+/*
+Add file
+*/
+
+A.files_menu {
+	text-decoration: none;
+	color: white;;
+}
+
+A.files_menu:hover {
+	color: white;
+	text-decoration: none;
+}
+
+A.files_menu:visited {
+	text-decoration: none;
+	color: White;
+}
+
+/*
+FILES in files_list.php
+*/
+
+A.files {
+	text-decoration: none;
+	color: black;;
+}
+
+A.files:hover {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+A.files:visited {
+	text-decoration: none;
+	color: black;
+}
+
+/*
+X ... remove from category
+*/
+
+A.x {
+	text-decoration: none;
+	color: black;;
+}
+
+A.x:hover {
+	color: black;
+	text-decoration: none;
+}
+
+A.x:visited {
+	text-decoration: none;
+	color: black;
+}
+
+/*
+the text under the categoy menu "add category"
+*/
+
+A.add_cat {
+	text-decoration: none;
+	color: Black;
+}
+
+A.add_cat:hover {
+	text-decoration: none;
+	color: Black;
+}
+
+A.add_cat:visited {
+	text-decoration: none;
+	color: Black;
+}
+
+/*
+A from Category menu
+*/
+
+A.cat {
+	text-decoration: none;
+	color: Black;
+}
+
+A.cat:hover {
+	font-weight: bold;
+	color: Black;
+}
+
+A.cat:visited {
+	text-decoration: none;
+	color: Black;
+}
+
+/*
+Body
+*/
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+.header_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: White;
+}
+
+.body_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: Black;
+}
+
+.add_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: Black;
+}
+
+.menu_bg {
+	border-style: solid;
+	background-color: #F4F1F0;
+	border-left-color: #D8D5CE;
+	border-left-width: 1px;
+	border-bottom-color: #D8D5CE;
+	border-bottom-width: 0px;
+	border-top-color: #D8D5CE;
+	border-top-width: 0px;
+	border-right-color: #D8D5CE;
+	border-right-width: 1px;
+}
+
+.menu_bg_bottom {
+	border-style: solid;
+	background-color: #F4F1F0;
+	border-left-color: #D8D5CE;
+	border-left-width: 1px;
+	border-bottom-color: #D8D5CE;
+	border-bottom-width: 1px;
+	border-top-color: #D8D5CE;
+	border-top-width: 0px;
+	border-right-color: #D8D5CE;
+	border-right-width: 1px;
+}
+
+.menu_bg_top {
+	border-style: solid;
+	background-color: White;
+	border-left-color: #D8D5CE;
+	border-left-width: 0px;
+	border-bottom-color: #D8D5CE;
+	border-bottom-width: 0px;
+	border-top-color: #D8D5CE;
+	border-top-width: 1px;
+	border-right-color: #D8D5CE;
+	border-right-width: 0px;
+}
+
+.cat_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: Black;
+}
+
+.search_input {
+	border-style: solid;
+	border-width: 1px;
+	border-left-color: #94989E;
+	border-bottom-color: #94989E;
+	border-top-color: #94989E;
+	border-right-color: #94989E;
+}
+
+.search_button {
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	background: #F0741E;
+	font-weight: bold;
+	color: White;
+}
+
+.vypis_hlaska {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: Black;
+	border-style: solid;
+	background-color: #FCDCC6;
+	border-left-color: #D8D5CE;
+	border-left-width: 1px;
+	border-bottom-color: #D8D5CE;
+	border-bottom-width: 1px;
+	border-top-color: #D8D5CE;
+	border-top-width: 1px;
+	border-right-color: #D8D5CE;
+	border-right-width: 1px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.list_cat {
+	font-weight: bold;
+	color: #F0741E;
+}
+
+.add_form {
+    background-color:#F4F1F0;
+    border-color:#D8D5CE;
+    border-style: solid;
+    border-width: 1px 1px 1px;
+    padding: 5px;
+}
+
+.search_form {
+    background-color:#F4F1F0;
+    border-color:#D8D5CE;
+    border-left:1px solid #D8D5CE;
+    border-style:solid;
+    border-width:0 1px 1px;
+    height:41px;
+}
+
+.filename {
+    font-weight: bold;
+    padding: 7px;
+}
+
+.add_file_input_text {
+    border: 1px solid #94989E;
+    font-size: 11px;
+    height: 19px;
+    padding-left: 4px;
+}
+
+div.filename, a {
+    text-decoration: none;
+    color: black;
+}
+
+div.filename, a.hover {
+    text-decoration: underline;
+    color: black;
+}

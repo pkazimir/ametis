@@ -13,7 +13,7 @@
 <script type="text/javascript">
 $(document).ready(function(){
     
-    var laMyFood=new Array();
+//    var laMyFood=new Array();
     
     $("tr#foodRecord").mouseover(function(){
         $(this).removeClass("out");
@@ -26,9 +26,11 @@ $(document).ready(function(){
         }
     });
     
+    $("td#food_name, td#food_ing, td#food_price").click(function(){
+        $("td#qty").toggle();
+    });
+    
     $("tr#foodRecord").click(function(){
-        var target = $(this).attr("id");
-        alert(target);
         if(!$(this).hasClass("clicked"))
         {
             $(this).addClass("clicked");
@@ -50,7 +52,7 @@ $(document).ready(function(){
     
     <td valign="top" width="182" align="left">
         <!-- MENU -->
-        <div class="post_share" style="position: fixed; top: 157px;">
+        <div class="post_share">
         <table cellpadding="0" cellspacing="0" border="0" width="182">
         <tr>
             <td width="6" height="29" background="images/breakfast/header_border_left.JPG"></td>
@@ -121,10 +123,10 @@ $(document).ready(function(){
             foreach($laFood[$idGroup] as $idFood => $laFoodItem):
             ?>
             <tr id="foodRecord" class="fontik" <?php if (($j++ % 2) == 0) echo 'bgcolor="#F4F1F0"' ?>>
-                <td id="input<?php echo $laFoodItem['id_food'] ?>" width="40"><input class="qty" id="qty" type="text" size="1" value="1" name="qty<?php echo $idFood ?>" style="visibility: hidden;"></td>
-                <td width="272" class="order_form"><?php echo $laFoodItem['food_name'] ?></td>
-                <td><?php echo $laFoodItem['ing'] ?></td>
-                <td align="right" width="90"><?php echo $laFoodItem['price'] ?>,- &euro; &nbsp;&nbsp;&nbsp;</td>
+                <td id="food_input" width="40">&nbsp</td>
+                <td id="food_name" width="272" class="order_form"><?php echo $laFoodItem['food_name'] ?></td>
+                <td id="food_ing"><?php echo $laFoodItem['ing'] ?></td>
+                <td id="food_price" align="right" width="90"><?php echo $laFoodItem['price'] ?>,- &euro; &nbsp;&nbsp;&nbsp;</td>
             </tr>
             <?php endforeach; ?>
         </table>
@@ -139,3 +141,13 @@ $(document).ready(function(){
 </tr>
 </table>
 <br>
+
+<!-- BEGIN print -->
+
+<table>
+<tr>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<!-- END print -->
